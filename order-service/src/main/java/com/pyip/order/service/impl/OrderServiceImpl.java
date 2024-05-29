@@ -29,8 +29,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    @Transactional
-//    @GlobalTransactional // xa模式
+//    @Transactional
+    @GlobalTransactional // xa模式
     public Long create(Order order) {
         // 创建订单
         orderMapper.insert(order);
